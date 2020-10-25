@@ -1,0 +1,45 @@
+{
+  "name": "cross-sourcerer",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@apollo/client": "^3.2.5",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "bootstrap": "^4.5.3",
+    "canvasjs-react-charts": "^1.0.5",
+    "dotenv": "^8.2.0",
+    "graphql": "^15.3.0",
+    "moment": "^2.29.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-moment": "^1.0.0",
+    "react-scripts": "3.4.4",
+    "reactstrap": "^8.6.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "mkcert": "cd public && mkcert -install && mkcert localhost 127.0.0.1 ::1",
+    "ssl": "cd build && http-server -S -o -C 'localhost+2.pem' -K 'localhost+2-key.pem'",
+    "pwa": "npm run mkcert && npm run build && npm run ssl",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
